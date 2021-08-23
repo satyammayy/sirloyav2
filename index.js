@@ -119,6 +119,12 @@ client.sendText(message.from, 'Humans make mistakes! \n\n So you dont need to de
 
   client.onMessage(async (message) => {
    const command = (message.body || "").toLowerCase();
+    
+    if (command=="alive?"){
+      client.sendText(message.from, " _yes i am alive_");
+      
+    }
+      
  
    if (command.includes("menu")){ 
                await client.reply(message.from, ` ✨We are on Chapter 5 \n\n Zoom has to be  installed first! \n\n *Meeting ID* : 2087463769 \n\n *Password* : 12345 \n\n ✨Material pamba singdo hwjik fw tak pada makha da leire \n\n  /(_in case you messed up, since you are a human_  LOL!)/  \n\n *note* :✨ _if you are using gb or fm or any other unofficial whatsapp, type materials in the chat to show the menu_ ✨ \n\n✨ *Group rules* ✨  \n\n1) Respect everyone here in this group \n\n2) Sharing memes is prohibited \n\n3) Don't send unnecessary messages! \n\n✨ *Feel free to ask and discuss lessons related to biology and topics taught on class* ✨\n  _final words: if you want to show this message again, type 'menu' `, message.id);
